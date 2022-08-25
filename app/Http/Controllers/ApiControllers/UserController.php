@@ -80,9 +80,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+     //for editing user data
     public function edit($id)
     {
-        //for editing user data
+       
         try {
             $user = User::find($id);
             if (isset($user)) {

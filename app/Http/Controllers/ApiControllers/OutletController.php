@@ -167,15 +167,14 @@ class OutletController extends Controller
     public function destroy($id)
     {
         //for deleting outlet data
-        $user_id = Outlet::find($id);
-        try {
-            if (isset($user_id)) {
-                return 'outlet deleted successfully!';
-            } else {
-                throw new Exception('Outlet id is not found!');
-            }
-        } catch (\Exception $e) {
-            return $e->getMessage();
+        $outlet = Outlet::findOrFail($id);
+        if($outlet->image)
+        {
+        $img = $outlet->image;
+        unlink($img);
         }
+        Outlet::findOrFail($id)->destroy();
+
+        return redirect()->back();
     }
 }

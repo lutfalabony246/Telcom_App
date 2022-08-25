@@ -172,7 +172,7 @@ class OutletController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    
+
     // destory outlet data
     public function destroy($id)
     {
@@ -184,7 +184,7 @@ class OutletController extends Controller
           $img = $outlet->image;
           unlink($img);
           }
-          Outlet::findOrFail($id)->delete();
+          Outlet::findOrFail($id)->destroy();
 
           return redirect()->back();
     }

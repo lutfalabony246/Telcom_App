@@ -13,7 +13,7 @@
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Customer Id <b style="color:red; font-weight:bold;font-size: 18px">**</b></label>
+                                            <label for="exampleInputEmail1">Name <b style="color:red; font-weight:bold;font-size: 18px">**</b></label>
                                             <input type="text" name="name" class="form-control" value="" placeholder="Enter customer id">
 
 
