@@ -16,14 +16,11 @@ use App\Http\Controllers\ApiControllers\OutletController;
 |
 */
 
-// Route::prefix('user')->group(function () {
-    
-    // Route::get('/logout', [UserController::class, 'logout']);
-
-// });
 // public route
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/register', [UserController::class, 'register']);
+
+// authentication using sanctum package
 // protected route
 Route::group(['middleware'=>['auth:sanctum']], function () {
     Route::resource('user', UserController::class);
